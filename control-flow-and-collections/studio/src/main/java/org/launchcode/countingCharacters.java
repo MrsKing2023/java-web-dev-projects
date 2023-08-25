@@ -1,6 +1,7 @@
 package org.launchcode;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class countingCharacters {
     public static void main(String[] args) {
@@ -14,7 +15,10 @@ public class countingCharacters {
             } else {
                 charCount.put(i,1);
             }
-            System.out.println(charCount);
+            //System.out.println(charCount);
+        }
+        for (Map.Entry<Character, Integer>  eachItem : charCount.entrySet()) {
+            System.out.println(eachItem.getKey() + " : " + eachItem.getValue());
         }
 
     }
