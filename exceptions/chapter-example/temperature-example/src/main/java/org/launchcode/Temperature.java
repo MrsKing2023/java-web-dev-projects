@@ -16,5 +16,13 @@ public class Temperature {
         }
 
         fahrenheit = aFahrenheit;
+
+        if (aFahrenheit < absoluteZeroFahrenheit) {
+            try {
+                throw new TemperatureException("That temperature is too low!");
+            } catch (TemperatureException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
